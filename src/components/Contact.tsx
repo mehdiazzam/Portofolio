@@ -1,6 +1,6 @@
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Mail, Phone, Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, Github, Linkedin, ExternalLink } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -9,19 +9,20 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold">
-              Get in{' '}
+              Get in{" "}
               <span className="bg-gradient-warm bg-clip-text text-transparent">
                 Touch
               </span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Let's collaborate on your next project. I'm always open to discussing new opportunities.
+              Let's collaborate on your next project. I'm always open to
+              discussing new opportunities.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="group p-8 bg-card hover:bg-card/80 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow animate-fade-in">
-              <a 
+              <a
                 href="mailto:mehdiazzam81@gmail.com"
                 className="flex flex-col items-center justify-center space-y-4 text-center h-full"
               >
@@ -38,8 +39,11 @@ const Contact = () => {
               </a>
             </Card>
 
-            <Card className="group p-8 bg-card hover:bg-card/80 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow animate-fade-in" style={{ animationDelay: '100ms' }}>
-              <a 
+            <Card
+              className="group p-8 bg-card hover:bg-card/80 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-glow animate-fade-in"
+              style={{ animationDelay: "100ms" }}
+            >
+              <a
                 href="tel:+963945279568"
                 className="flex flex-col items-center justify-center space-y-4 text-center h-full"
               >
@@ -56,13 +60,28 @@ const Contact = () => {
               </a>
             </Card>
           </div>
-          <div className="text-center pt-12 pb-6 space-y-4 animate-fade-in" style={{ animationDelay: '300ms' }}>
+          <div
+            className="text-center pt-12 pb-6 space-y-4 animate-fade-in"
+            style={{ animationDelay: "300ms" }}
+          >
             <div className="flex justify-center gap-4">
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10 hover:text-primary">
-                <Github className="w-5 h-5" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-primary/10 hover:text-primary"
+              >
+                <a href="https://github.com/mehdiazzam" target="_blank">
+                  <Github className="w-5 h-5" />
+                </a>
               </Button>
-              <Button variant="ghost" size="icon" className="hover:bg-primary/10 hover:text-primary">
-                <Linkedin className="w-5 h-5" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-primary/10 hover:text-primary"
+              >
+                <a href="https://www.linkedin.com/in/mehdi-azzam-58859b38a/" target="_blank">
+                  <Linkedin className="w-5 h-5" />
+                </a>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground font-mono">
