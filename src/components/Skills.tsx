@@ -39,7 +39,20 @@ const skills = [
   },
   {
     name: "Tailwind CSS",
-    icon: <FontAwesomeIcon icon={faCss} />,
+    icon: <svg
+        width=""
+        height="1em"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"
+        />
+      </svg>,
     color: "text-orange-500 from-orange-500 to-red-500",
   },
   {
@@ -76,7 +89,7 @@ const Skills = () => {
                 <div
                   className={`absolute inset-0 bg-gradient-to-r ${skill.color} opacity-0 group-hover:opacity-25 transition-opacity duration-300`}
                 ></div>
-                <div className="p-8 space-y-4">
+                <div className="p-8 space-y-4 text-center">
                   <div
                     className={cn(
                       "text-5xl group-hover:scale-110 transition-transform duration-300",
