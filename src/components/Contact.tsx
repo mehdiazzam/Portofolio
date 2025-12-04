@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Github, Linkedin, ExternalLink } from "lucide-react";
+import { Mail, Phone, ExternalLink } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
   return (
@@ -16,7 +18,7 @@ const Contact = () => {
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Let's collaborate on your next project. I'm always open to
-              discussing new opportunities.
+              discuss new opportunities.
             </p>
           </div>
 
@@ -71,7 +73,7 @@ const Contact = () => {
                 className="hover:bg-primary/10 hover:text-primary"
               >
                 <a href="https://github.com/mehdiazzam" target="_blank">
-                  <Github className="w-5 h-5" />
+                  <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
                 </a>
               </Button>
               <Button
@@ -79,13 +81,16 @@ const Contact = () => {
                 size="icon"
                 className="hover:bg-primary/10 hover:text-primary"
               >
-                <a href="https://www.linkedin.com/in/mehdi-azzam-58859b38a/" target="_blank">
-                  <Linkedin className="w-5 h-5" />
+                <a
+                  href="https://www.linkedin.com/in/mehdi-azzam-58859b38a/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faLinkedinIn}></FontAwesomeIcon>
                 </a>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground font-mono">
-              &copy; 2025 Mehdi Azzam. Built with React & TypeScript
+              &copy; 2025 Mehdi Azzam. All rights reserved.
             </p>
           </div>
         </div>

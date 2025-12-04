@@ -39,7 +39,7 @@ const Hero = () => {
           </div>
 
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            specializing in building modern, responsive, and high-performance
+            Specialized in building modern, responsive, and high-performance
             web applications
           </p>
 
