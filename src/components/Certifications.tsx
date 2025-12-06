@@ -1,11 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Award } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import certImage from "@/assets/coursera-js-deep-dive.jpeg";
 
 const certs = [
   {
     url: "https://www.coursera.org/account/accomplishments/verify/TMT0B8KZRAEA",
-    image: "/certs/coursera-js-deep-dive.jpeg",
+    image: certImage,
   },
 ];
 
@@ -32,11 +33,11 @@ const Certifications = () => {
                 <CarouselContent>
                   {certs.map((cert, index) => (
                     <CarouselItem key={index}>
-                      <a href={cert.url} target="_blank">
-                        <img src={cert.image} />
+                      <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                        <img src={cert.image} alt={`cert-${index}`} />
                       </a>
                     </CarouselItem>
-                  ))}{" "}
+                  ))}
                 </CarouselContent>
               </Carousel>
             </div>
