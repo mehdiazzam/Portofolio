@@ -1,20 +1,18 @@
 import { Card } from "@/components/ui/card";
-import { Award } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
-import certImage from "@/assets/coursera-js-deep-dive.jpeg";
 
 const certs = [
   {
     url: "https://www.coursera.org/account/accomplishments/verify/TMT0B8KZRAEA",
-    image: certImage,
+    image: './coursera-js-deep-dive.jpeg'
   },
 ];
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="min-h-screen py-28 px-6 relative">
+    <section id="certifications" className="min-h-screen py-28  relative">
       <div className="container mx-auto">
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className="mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold">
               Certifications &{" "}

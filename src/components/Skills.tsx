@@ -64,9 +64,9 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="min-h-screen py-28 px-6 relative">
+    <section id="skills" className="min-h-screen py-28  relative">
       <div className="container mx-auto">
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className=" mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold">
               Technical{" "}
