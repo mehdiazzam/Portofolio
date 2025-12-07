@@ -6,7 +6,7 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = () => {
   return (
-    <section id="contact" className="min-h-screen py-52  relative">
+    <section id="contact" className="min-h-screen snap-start py-52  relative">
       <div className="container mx-auto">
         <div className="mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in">

@@ -64,7 +64,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="min-h-screen py-28  relative">
+    <section id="skills" className="min-h-screen snap-start py-28  relative">
       <div className="container mx-auto">
         <div className=" mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in">
