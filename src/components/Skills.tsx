@@ -15,27 +15,32 @@ const skills = [
   {
     name: "HTML",
     icon: <FontAwesomeIcon icon={faHtml5} />,
-    color: "text-orange-500 from-orange-500 to-red-500",
+    accent: "text-orange-500",
+    gradient: "from-orange-500/70 via-amber-500/60 to-red-500/60",
   },
   {
     name: "CSS",
     icon: <FontAwesomeIcon icon={faCss3} />,
-    color: "text-orange-500 from-orange-500 to-red-500",
+    accent: "text-sky-500",
+    gradient: "from-sky-500/70 via-cyan-400/60 to-blue-500/60",
   },
   {
     name: "JavaScript",
     icon: <FontAwesomeIcon icon={faJs} />,
-    color: "text-orange-500 from-orange-500 to-red-500",
+    accent: "text-yellow-500",
+    gradient: "from-yellow-400/70 via-amber-400/60 to-orange-500/60",
   },
   {
     name: "Node JS",
     icon: <FontAwesomeIcon icon={faNodeJs} />,
-    color: "text-orange-500 from-orange-500 to-red-500",
+    accent: "text-emerald-500",
+    gradient: "from-emerald-500/70 via-green-400/60 to-teal-400/60",
   },
   {
     name: "React",
     icon: <FontAwesomeIcon icon={faReact} />,
-    color: "text-orange-500 from-orange-500 to-red-500",
+    accent: "text-cyan-400",
+    gradient: "from-cyan-400/70 via-blue-400/60 to-indigo-500/60",
   },
   {
     name: "Tailwind CSS",
@@ -53,18 +58,23 @@ const skills = [
           d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"
         />
       </svg>,
-    color: "text-orange-500 from-orange-500 to-red-500",
+    accent: "text-teal-400",
+    gradient: "from-teal-400/70 via-cyan-300/60 to-blue-400/60",
   },
   {
     name: "WordPress",
     icon: <FontAwesomeIcon icon={faWordpress} />,
-    color: "text-orange-500 from-orange-500 to-red-500",
+    accent: "text-slate-200",
+    gradient: "from-slate-400/70 via-gray-500/60 to-slate-700/60",
   },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="min-h-screen snap-start py-28  relative">
+    <section
+      id="skills"
+      className="min-h-screen snap-start py-28 relative border-t border-border/60 bg-gradient-to-b from-background via-background/95 to-background/85"
+    >
       <div className="container mx-auto">
         <div className=" mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in">
@@ -87,13 +97,13 @@ const Skills = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div
-                  className={`absolute inset-0 bg-gradient-to-r ${skill.color} opacity-0 group-hover:opacity-25 transition-opacity duration-300`}
+                  className={`absolute inset-0 bg-gradient-to-r ${skill.gradient} opacity-0 group-hover:opacity-30 transition-opacity duration-300`}
                 ></div>
                 <div className="p-8 space-y-4 text-center">
                   <div
                     className={cn(
                       "text-5xl group-hover:scale-110 transition-transform duration-300",
-                      skill.color
+                      skill.accent
                     )}
                   >
                     {skill.icon}

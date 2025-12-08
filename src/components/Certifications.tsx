@@ -4,13 +4,19 @@ import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 const certs = [
   {
     url: "https://www.coursera.org/account/accomplishments/verify/TMT0B8KZRAEA",
-    image: './coursera-js-deep-dive.jpeg'
+    image: "./coursera-js-deep-dive.jpeg",
+    title: "JavaScript Deep Dive",
+    issuer: "Coursera",
+    year: "2025",
   },
 ];
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="min-h-screen snap-start py-28  relative">
+    <section
+      id="certifications"
+      className="min-h-screen snap-start py-28 relative border-t border-border/60 bg-gradient-to-b from-background via-background/94 to-background/84"
+    >
       <div className="container mx-auto">
         <div className="mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in">
@@ -31,9 +37,27 @@ const Certifications = () => {
                 <CarouselContent>
                   {certs.map((cert, index) => (
                     <CarouselItem key={index}>
-                      <a href={cert.url} target="_blank" rel="noopener noreferrer">
-                        <img src={cert.image} alt={`cert-${index}`} />
-                      </a>
+                      <figure className="space-y-4">
+                        <a
+                          href={cert.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
+                        >
+                          <img
+                            src={cert.image}
+                            alt={`${cert.title} certificate`}
+                            loading="lazy"
+                            className="rounded-md shadow-md"
+                          />
+                        </a>
+                        <figcaption className="text-sm text-muted-foreground">
+                          <span className="font-medium text-foreground">{cert.title}</span>
+                          {" • "}
+                          {cert.issuer}
+                          {cert.year ? ` (${cert.year})` : ""}
+                        </figcaption>
+                      </figure>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
