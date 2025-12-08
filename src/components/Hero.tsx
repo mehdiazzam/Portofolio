@@ -52,7 +52,7 @@ const Hero = () => {
           </p>
           <div className="flex items-center gap-3 justify-center text-sm text-muted-foreground">
             <span className="px-3 py-1 rounded-full bg-secondary/60 border border-border/60">
-              Remote friendly
+              Remote-friendly
             </span>
             <span className="px-3 py-1 rounded-full bg-secondary/60 border border-border/60">
               Freelance & full-time

@@ -119,7 +119,7 @@ const Skills = () => {
           <div className="text-center pt-8">
             <div className="inline-block px-6 py-3 rounded-full bg-secondary/50 backdrop-blur-sm border border-primary/20">
               <p className="text-sm text-muted-foreground font-mono">
-                Constantly learning and expanding my skillset
+                Constantly learning and expanding my skill set
               </p>
             </div>
           </div>

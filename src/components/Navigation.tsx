@@ -63,10 +63,10 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { id: "home", label: "Home", icon: <Home className="w-4 h-4" /> },
-    { id: "skills", label: "Skills", icon: <Sparkles className="w-4 h-4" /> },
-    { id: "certifications", label: "Certifications", icon: <Award className="w-4 h-4" /> },
-    { id: "contact", label: "Contact", icon: <Mail className="w-4 h-4" /> },
+    { id: "home", label: "Home"},
+    { id: "skills", label: "Skills"},
+    { id: "certifications", label: "Certifications"},
+    { id: "contact", label: "Contact"},
   ];
 
   return (
@@ -93,32 +93,6 @@ const Navigation = () => {
                 );
               })}
             </div>
-          </div>
-        </div>
-      </nav>
-
-      <nav className="md:hidden fixed bottom-5 inset-x-0 z-50">
-        <div className="mx-auto max-w-md px-4">
-          <div className="flex items-center justify-between rounded-full bg-background/90 backdrop-blur-lg border border-border shadow-lg px-2 py-2">
-            {navItems.map((item) => {
-              const isActive = activeSection === item.id;
-              return (
-                <Button
-                  key={item.id}
-                  variant={isActive ? "default" : "ghost"}
-                  size="sm"
-                  className={`flex-1 flex items-center justify-center gap-2 ${
-                    isActive
-                      ? "bg-primary text-primary-foreground shadow-glow"
-                      : "hover:bg-secondary"
-                  }`}
-                  onClick={() => scrollToSection(item.id)}
-                >
-                  {item.icon}
-                  <span className="text-sm">{item.label}</span>
-                </Button>
-              );
-            })}
           </div>
         </div>
       </nav>
