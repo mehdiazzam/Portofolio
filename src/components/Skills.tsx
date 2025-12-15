@@ -1,13 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
-  faCss,
-  faCss3,
   faHtml5,
+  faCss3Alt,
   faJs,
-  faNodeJs,
   faReact,
   faWordpress,
+  faNode,
 } from "@fortawesome/free-brands-svg-icons";
+
+import {
+  faPalette,
+  faMobileScreenButton,
+  faGaugeHigh,
+  faNetworkWired,
+} from "@fortawesome/free-solid-svg-icons";
+
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -19,8 +27,8 @@ const skills = [
     gradient: "from-orange-500/70 via-amber-500/60 to-red-500/60",
   },
   {
-    name: "CSS",
-    icon: <FontAwesomeIcon icon={faCss3} />,
+    name: "CSS3",
+    icon: <FontAwesomeIcon icon={faCss3Alt} />,
     accent: "text-sky-500",
     gradient: "from-sky-500/70 via-cyan-400/60 to-blue-500/60",
   },
@@ -31,8 +39,8 @@ const skills = [
     gradient: "from-yellow-400/70 via-amber-400/60 to-orange-500/60",
   },
   {
-    name: "Node JS",
-    icon: <FontAwesomeIcon icon={faNodeJs} />,
+    name: "Node.js",
+    icon: <FontAwesomeIcon icon={faNode} />,
     accent: "text-emerald-500",
     gradient: "from-emerald-500/70 via-green-400/60 to-teal-400/60",
   },
@@ -44,8 +52,9 @@ const skills = [
   },
   {
     name: "Tailwind CSS",
-    icon: <svg
-        width=""
+    icon: (
+      <svg
+        width="auto"
         height="1em"
         viewBox="0 0 24 24"
         fill="currentColor"
@@ -57,9 +66,34 @@ const skills = [
           clipRule="evenodd"
           d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"
         />
-      </svg>,
+      </svg>
+    ),
     accent: "text-teal-400",
     gradient: "from-teal-400/70 via-cyan-300/60 to-blue-400/60",
+  },
+  {
+    name: "RESTful APIs",
+    icon: <FontAwesomeIcon icon={faNetworkWired} />,
+    accent: "text-emerald-500",
+    gradient: "from-emerald-500/70 via-teal-400/60 to-cyan-500/60",
+  },
+  {
+    name: "UI / UX Basics",
+    icon: <FontAwesomeIcon icon={faPalette} />,
+    accent: "text-indigo-400",
+    gradient: "from-indigo-400/70 via-violet-500/60 to-purple-600/60",
+  },
+  {
+    name: "Responsive Design",
+    icon: <FontAwesomeIcon icon={faMobileScreenButton} />,
+    accent: "text-emerald-400",
+    gradient: "from-emerald-400/70 via-teal-400/60 to-cyan-500/60",
+  },
+  {
+    name: "Web Performance",
+    icon: <FontAwesomeIcon icon={faGaugeHigh} />,
+    accent: "text-yellow-400",
+    gradient: "from-yellow-400/70 via-amber-400/60 to-orange-500/60",
   },
   {
     name: "WordPress",
@@ -76,7 +110,7 @@ const Skills = () => {
       className="min-h-screen snap-start py-28 relative border-t border-border/60 bg-gradient-to-b from-background via-background/95 to-background/85"
     >
       <div className="container mx-auto">
-        <div className=" mx-auto space-y-12">
+        <div className="mx-auto space-y-12">
           <div className="text-center space-y-4 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold">
               Technical{" "}

@@ -4,26 +4,35 @@ import { Button } from "@/components/ui/button";
 import { Send, Sparkles, Clock3, MapPin } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { send } from "@emailjs/browser";
 
 const Contact = () => {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const { name, email, message } = formState;
-    if (!name.trim() || !email.trim() || !message.trim()) return;
-
-    const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:mehdiazzam81@gmail.com?subject=${subject}&body=${body}`;
-  };
+  const [formState, setFormState] = useState({ name: "", email: "", message: "" });
+  const [sent, setSent] = useState(false);
 
   const handleChange = (field: "name" | "email" | "message") => (value: string) =>
     setFormState((prev) => ({ ...prev, [field]: value }));
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const { name, email, message } = formState;
+    if (!name || !email || !message) return;
+
+    send(
+      "service_khbzye3",
+      "template_g5rrkai",
+      { name, email, message },
+      "UM-pNiAN0llaT_O4y"
+    )
+      .then(() => {
+        setSent(true);
+        setFormState({ name: "", email: "", message: "" });
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Failed to send message. Please try again later.");
+      });
+  };
 
   return (
     <section
@@ -39,7 +48,7 @@ const Contact = () => {
             </span>
             <h2 className="text-4xl md:text-5xl font-bold">Let’s work together</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Ready for a full-time remote role-share your team’s goals and timeline.
+              Ready for a full-time remote role—share your team’s goals and timeline.
             </p>
           </div>
 
@@ -86,6 +95,11 @@ const Contact = () => {
                     Send Message
                   </Button>
                 </div>
+                {sent && (
+                  <p className="text-green-500 font-medium mt-2 animate-fade-in">
+                    Thank you! Your message has been sent.
+                  </p>
+                )}
               </form>
 
               <div className="hidden md:block rounded-2xl border border-primary/30 bg-gradient-to-b from-primary/15 via-primary/8 to-background/80 p-6 space-y-5">
@@ -123,37 +137,25 @@ const Contact = () => {
               </div>
             </div>
           </Card>
+
           <div className="flex justify-center gap-4">
-              <Button
-                asChild
-                variant="ghost"
-                size="icon"
-                className="hover:bg-primary/10 hover:text-primary"
-              >
-                <a href="https://github.com/mehdiazzam" target="_blank" rel="noreferrer">
-                  <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="ghost"
-                size="icon"
-                className="hover:bg-primary/10 hover:text-primary"
-              >
-                <a
-                  href="https://www.linkedin.com/in/mehdi-azzam-58859b38a/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon icon={faLinkedinIn}></FontAwesomeIcon>
-                </a>
-              </Button>
-            </div>
-            <div className="flex justify-center">
+            <Button asChild variant="ghost" size="icon" className="hover:bg-primary/10 hover:text-primary">
+              <a href="https://github.com/mehdiazzam" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </Button>
+            <Button asChild variant="ghost" size="icon" className="hover:bg-primary/10 hover:text-primary">
+              <a href="https://www.linkedin.com/in/mehdi-azzam-58859b38a/" target="_blank" rel="noreferrer">
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </a>
+            </Button>
+          </div>
+
+          <div className="flex justify-center">
             <p className="text-sm text-muted-foreground font-mono">
               &copy; 2025 Mehdi Azzam. Frontend developer.
             </p>
-            </div>
+          </div>
         </div>
       </div>
     </section>

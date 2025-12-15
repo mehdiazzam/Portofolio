@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { Home, Sparkles, Award, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
