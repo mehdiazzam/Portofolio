@@ -22,8 +22,6 @@ const Navigation = () => {
         const id = entry.target.id;
         if (!sections.includes(id)) return;
 
-        // If we are in a manual scroll, only accept updates for the target section,
-        // then release control.
         if (manualTargetRef.current) {
           if (id !== manualTargetRef.current) return;
           manualTargetRef.current = null;

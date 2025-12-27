@@ -47,8 +47,8 @@ const Hero = () => {
           </div>
 
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            I craft performant React frontends with thoughtful UX, accessibility
-            first, and a focus on clean, maintainable systems.
+            Experienced Frontend Developer with 2+ years building scalable,
+            user-centric web applications. Proficient in React and TypeScript 
           </p>
           <div className="flex items-center gap-3 justify-center text-sm text-muted-foreground">
             <span className="px-3 py-1 rounded-full bg-secondary/60 border border-border/60">
