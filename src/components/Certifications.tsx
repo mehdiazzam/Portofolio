@@ -44,12 +44,12 @@ const Certifications = () => {
             </p>
           </div>
 
-          <Card className="p-12 bg-card/50 backdrop-blur-sm border-border transition-all duration-300 animate-fade-in">
+          <Card className="p-10 bg-card/50 backdrop-blur-sm border-border transition-all duration-300 animate-fade-in">
             <Carousel className="w-full max-w-3xl mx-auto">
               <CarouselContent>
                 {certifications.map((cert, index) => (
                   <CarouselItem key={index} className="basis-full">
-                    <figure className="flex flex-col items-center space-y-4 text-center">
+                    <figure className="flex flex-col p-24 items-center space-y-4 text-center">
                       <a
                         href={cert.url}
                         target="_blank"
