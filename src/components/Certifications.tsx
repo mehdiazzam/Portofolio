@@ -43,13 +43,15 @@ const Certifications = () => {
               Professional credentials and verified accomplishments
             </p>
           </div>
-
           <Card className="p-10 bg-card/50 backdrop-blur-sm border-border transition-all duration-300 animate-fade-in">
             <Carousel className="w-full max-w-3xl mx-auto">
               <CarouselContent>
                 {certifications.map((cert, index) => (
-                  <CarouselItem key={index} className="basis-full">
-                    <figure className="flex flex-col p-24 items-center space-y-4 text-center">
+                  <CarouselItem
+                    key={index}
+                    className="basis-full md:basis-1/2 lg:basis-full"
+                  >
+                    <figure className="flex flex-col items-center space-y-6 text-center px-4 sm:px-8 md:p-24">
                       <a
                         href={cert.url}
                         target="_blank"
@@ -60,11 +62,10 @@ const Certifications = () => {
                           src={cert.image}
                           alt={`${cert.title} certificate`}
                           loading="lazy"
-                          className="rounded-md shadow-md max-h-[320px] object-contain"
+                          className="rounded-md shadow-lg w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl object-contain transition-transform duration-300 hover:scale-105"
                         />
                       </a>
-
-                      <figcaption className="text-sm text-muted-foreground">
+                      <figcaption className="text-sm sm:text-base text-muted-foreground">
                         <span className="font-medium text-foreground">
                           {cert.title}
                         </span>
